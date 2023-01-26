@@ -4,8 +4,14 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #333;
+  background: linear-gradient(90deg, rgb(112, 112, 113) 0%, rgb(198, 198, 203) 65%, rgb(245, 248, 249) 100%);
+  background-attachment: fixed;
   font-family: "Montserrat", sans-serif;
   color: rgb(10, 10, 10);
 }
@@ -15,28 +21,113 @@ body {
   align-items: center;
   width: 100vw;
   height: 15vh;
-  border-bottom: 2px solid white;
+  background-color: rgb(245, 248, 249);
 }
 .header__space {
-  position: absolute;
   display: flex;
+  font-size: 1.5rem;
+}
+.header__img {
+  width: 50px;
 }
 .header__title {
-  color: red;
+  color: rgb(207, 46, 46);
+  margin-left: 20px;
 }
 .header__color-title {
   color: black;
 }
+.header__current-date {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  text-align: center;
+}
+.header__day {
+  font-weight: bold;
+  border-bottom: 1px solid rgb(207, 46, 46);
+}
+.header__timer {
+  padding-top: 5px;
+}
 
-.login__button {
-  width: 150px;
-  height: 50px;
+.login-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 75vh;
+}
+.login-body .login {
+  position: relative;
+  width: 30rem;
+  height: 40rem;
+  background-color: transparent;
+  border-radius: 2rem;
+  border: 2px solid #fff;
+}
+.login-body .login__title {
+  font-size: 1.5rem;
+  padding: 2rem 3rem 1rem;
+  font-weight: 700;
+}
+.login-body .login__description {
+  font-size: 1rem;
+  padding: 0 3rem 3rem;
+  color: rgb(106, 105, 105);
+}
+.login-body .login__email {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.login-body .login__label {
+  font-size: 1.3rem;
+  padding: 0 3rem 0.5rem;
+}
+.login-body .login__input {
+  position: relative;
+  width: 24rem;
+  margin: 0 3rem 2rem;
+  padding: 1rem 1rem;
+  border-radius: 0.6rem;
+  border: 0.2rem solid rgb(207, 46, 46);
+}
+.login-body .login__button {
+  position: relative;
+  width: 10rem;
+  height: 3.5rem;
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color: rgba(255, 0, 0, 0.4);
+  background-color: rgb(207, 46, 46);
   transition: background-color 0.3s;
+  color: #fff;
 }
-.login__button:hover {
-  background-color: rgb(255, 0, 0);
+.login-body .login__button:hover {
+  background-color: rgba(207, 46, 46, 0.4);
+  color: black;
+  border: 1px solid rgb(207, 46, 46);
+}
+.login-body .login .button1 {
+  margin: 4rem 3rem;
+}
+.login-body .login .button2 {
+  margin: 0 3rem 0 0;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100vw;
+  height: 7vh;
+  font-size: 1.2rem;
+  background-color: rgb(40, 40, 40);
+  color: #fff;
+}
+.footer__company-name {
+  color: rgb(207, 46, 46);
 }/*# sourceMappingURL=style.css.map */
