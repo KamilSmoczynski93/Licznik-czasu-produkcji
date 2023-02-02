@@ -51,6 +51,35 @@ body {
   padding-top: 5px;
 }
 
+.menu__bgc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 5vh;
+  color: #fff;
+}
+.menu__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem 0 3rem;
+  width: 15rem;
+  height: 3rem;
+  font-size: 1.4rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.menu__title:hover {
+  background-color: rgb(207, 46, 46);
+}
+.menu__title a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .login-body {
   display: flex;
   justify-content: space-around;
@@ -74,7 +103,7 @@ body {
 .login-body .login__description {
   font-size: 1rem;
   padding: 0 3rem 3rem;
-  color: rgb(106, 105, 105);
+  color: rgb(143, 142, 142);
 }
 .login-body .login__email {
   display: flex;
@@ -114,6 +143,48 @@ body {
 }
 .login-body .login .button2 {
   margin: 0 3rem 0 0;
+}
+
+.timer .counter {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 40px auto;
+}
+.timer .counter__work, .timer .counter__measurements, .timer .counter__rearming, .timer .counter__failure {
+  background-color: lightgray;
+  width: 22%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+.timer .counter__work:hover, .timer .counter__measurements:hover, .timer .counter__rearming:hover, .timer .counter__failure:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.timer .counter__work .work-time,
+.timer .counter__work .measurements-time,
+.timer .counter__work .rearming-time,
+.timer .counter__work .failure-time, .timer .counter__measurements .work-time,
+.timer .counter__measurements .measurements-time,
+.timer .counter__measurements .rearming-time,
+.timer .counter__measurements .failure-time, .timer .counter__rearming .work-time,
+.timer .counter__rearming .measurements-time,
+.timer .counter__rearming .rearming-time,
+.timer .counter__rearming .failure-time, .timer .counter__failure .work-time,
+.timer .counter__failure .measurements-time,
+.timer .counter__failure .rearming-time,
+.timer .counter__failure .failure-time {
+  font-size: 40px;
 }
 
 .footer {

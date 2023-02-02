@@ -55,6 +55,41 @@ body {
 	}
 }
 
+.menu {
+	&__bgc {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100vw;
+		height: 5vh;
+		color: #fff;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 2rem 0 3rem;
+		width: 15rem;
+		height: 3rem;
+		font-size: 1.4rem;
+		border: 1px solid #fff;
+		border-radius: 5px;
+
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: rgb(207, 46, 46);
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
 .login-body {
 	display: flex;
 	justify-content: space-around;
@@ -70,7 +105,6 @@ body {
 		border-radius: 2rem;
 		border: 2px solid #fff;
 
-
 		&__title {
 			font-size: 1.5rem;
 			padding: 2rem 3rem 1rem;
@@ -80,7 +114,7 @@ body {
 		&__description {
 			font-size: 1rem;
 			padding: 0 3rem 3rem;
-			color: rgb(106, 105, 105);
+			color: rgb(143, 142, 142);
 		}
 
 		&__email {
@@ -124,6 +158,100 @@ body {
 		.button2 {
 			margin: 0 3rem 0 0;
 		}
+	}
+}
+
+// .timer {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100vw;
+//     height: 65vh;
+
+//     .stopwatch {
+
+// 		&__display {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+// 			background-color: white;
+// 			width: 20rem;
+// 			height: 5rem;
+//             margin: 1rem;
+//             font-size: 1.5rem;
+//             font-weight: bold;
+//             border-radius: .7rem;
+// 		}
+
+// 		&__work {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+// 			margin-top: 10px;
+// 			width: 20rem;
+// 			height: 20rem;
+//             margin: 1rem;
+//             font-size: 1.5rem;
+//             font-weight: bold;
+//             border-radius: .7rem;
+
+// 			&.stopwatch__work--work {
+// 				background-color: rgb(0, 128, 0);
+// 			}
+
+// 			&.stopwatch__work--measuring {
+// 				background-color: rgb(255, 255, 0);
+// 			}
+
+// 			&.stopwatch__work--change {
+// 				background-color: rgb(255, 165, 0);
+// 			}
+
+// 			&.stopwatch__work--breakdown {
+// 				background-color: rgb(255, 0, 0);
+// 			}
+// 		}
+// 	}
+// }
+
+.timer {
+	.counter {
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+		margin: 40px auto;
+        
+       
+		&__work,
+		&__measurements,
+		&__rearming,
+		&__failure {
+			background-color: lightgray;
+			width: 22%;
+			height: 150px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			border-radius: 10px;
+            z-index: 100;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.1);
+			}
+			.counter__text {
+                font-size: 20px;
+				margin-bottom: 20px;
+			}
+			.work-time,
+			.measurements-time,
+			.rearming-time,
+			.failure-time {
+				font-size: 40px;
+			}
+		}
+      
 	}
 }
 

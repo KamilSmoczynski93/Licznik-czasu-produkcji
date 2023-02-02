@@ -18,7 +18,7 @@
 
 <body>
 
-    <section class="header">
+    <header class="header">
         <div class="header__space">
             <h1 class="header__title">WAKMET <span class="header__color-title">Control System</span></h1>
             <img src="./img/logo.webp" alt="zawór z logo F.A.P. Wakmet" class="header__img">
@@ -29,50 +29,78 @@
 
 
         </div>
-    </section>
+    </header>
 
-    <section class="menu">
+    <nav class="menu">
         <div class="menu__bgc">
-            <div class="menu__start">
-                <p class="menu__title">Start</p>
+            <div class="menu__title">
+                <a href="./index.html" class="menu__start">Start</a>
             </div>
-            <div class="menu__start">
-                <p class="menu__title">Licznik</p>
+            <div class="menu__title">
+                <a href="#" class="menu__timer">Licznik</a>
             </div>
-            <div class="menu__start">
-                <p class="menu__title">Zestawienie</p>
+            <div class="menu__title">
+                <a href="#" class="menu__sum">Zestawienie</a>
             </div>
         </div>
+    </nav>
+  
+
+    <section class="timer">
+
+        <!-- <div class="stopwatch">
+            <div class="stopwatch__time"></div>
+            <div class="stopwatch__display"></div>
+            <div class="stopwatch__controls">
+              <div class="stopwatch__work stopwatch__work--work">Praca</div>
+            </div>
+          </div>
+          <div class="stopwatch">
+            <div class="stopwatch__time"></div>
+            <div class="stopwatch__display"></div>
+            <div class="stopwatch__controls">
+              <div class="stopwatch__work stopwatch__work--measuring">Pomiary</div>
+            </div>
+          </div>
+          <div class="stopwatch">
+            <div class="stopwatch__time"></div>
+            <div class="stopwatch__display"></div>
+            <div class="stopwatch__controls">
+              <div class="stopwatch__work stopwatch__work--change">Przezbrojenie</div>
+            </div>
+          </div>
+          <div class="stopwatch">
+            <div class="stopwatch__time"></div>
+            <div class="stopwatch__display"></div>
+            <div class="stopwatch__controls">
+              <div class="stopwatch__work stopwatch__work--breakdown">Awaria</div>
+            </div>
+          </div>
+           -->
+
+           <div class="counter">
+            <div class="counter__work">
+              <p class="counter__text">Praca</p>
+              <p class="work-time">00:00:00</p>
+            </div>
+            <div class="counter__measurements">
+              <p class="counter__text">Pomiary</p>
+              <p class="measurements-time">00:00:00</p>
+            </div>
+            <div class="counter__rearming">
+              <p class="counter__text">Przegląd</p>
+              <p class="rearming-time">00:00:00</p>
+            </div>
+            <div class="counter__failure">
+              <p class="counter__text">Awarie</p>
+              <p class="failure-time">00:00:00</p>
+            </div>
+          </div>
+
+
     </section>
 
-    <section class="login-body">
-        <img src="./img/zasówa.webp" alt="">
-
-        <div class="login">
-            <div class="login__title">
-                <span>Witaj!</span>
-            </div>
-
-
-            <div class="login__description">
-                <p>Wypełnij pola niżej, żeby się zalogować</p>
-            </div>
-            <div class="login__email">
-                <label for="email" class="login__label">Identyfikator</label>
-                <input type="text" class="login__input" placeholder="Wpisz swój identyfikator">
-            </div>
-            <div class="login__password">
-                <label for="password" class="login__label">Hasło</label>
-                <input type="text" class="login__input" placeholder=" Wpisz swoje hasło">
-            </div>
-
-
-            <button class="login__button button1">Zaloguj</button>
-            <button class="login__button button2">Zarejestruj</button>
-
-        </div>
-
-    </section>
+ 
 
     <footer class="footer">
         <div class="footer__space">
@@ -86,7 +114,7 @@
 
 
 
-    <script src="/js/script.js"></script>
+    <script src="/js/scriptLicznik.js"></script>
 </body>
 
 </html>
