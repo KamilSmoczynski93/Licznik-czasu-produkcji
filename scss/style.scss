@@ -24,7 +24,7 @@ body {
 	display: flex;
 	align-items: center;
 	width: 100vw;
-	height: 15vh;
+	height: 10vh;
 	background-color: rgb(245, 248, 249);
 	&__space {
 		display: flex;
@@ -43,7 +43,7 @@ body {
 	&__current-date {
 		position: absolute;
 		right: 30px;
-		top: 30px;
+		top: auto;
 		text-align: center;
 	}
 	&__day {
@@ -62,6 +62,7 @@ body {
 		align-items: center;
 		width: 100vw;
 		height: 5vh;
+        margin-top: 2rem;
 		color: #fff;
 	}
 
@@ -161,65 +162,16 @@ body {
 	}
 }
 
-// .timer {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100vw;
-//     height: 65vh;
 
-//     .stopwatch {
-
-// 		&__display {
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-// 			background-color: white;
-// 			width: 20rem;
-// 			height: 5rem;
-//             margin: 1rem;
-//             font-size: 1.5rem;
-//             font-weight: bold;
-//             border-radius: .7rem;
-// 		}
-
-// 		&__work {
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-// 			margin-top: 10px;
-// 			width: 20rem;
-// 			height: 20rem;
-//             margin: 1rem;
-//             font-size: 1.5rem;
-//             font-weight: bold;
-//             border-radius: .7rem;
-
-// 			&.stopwatch__work--work {
-// 				background-color: rgb(0, 128, 0);
-// 			}
-
-// 			&.stopwatch__work--measuring {
-// 				background-color: rgb(255, 255, 0);
-// 			}
-
-// 			&.stopwatch__work--change {
-// 				background-color: rgb(255, 165, 0);
-// 			}
-
-// 			&.stopwatch__work--breakdown {
-// 				background-color: rgb(255, 0, 0);
-// 			}
-// 		}
-// 	}
-// }
 
 .timer {
 	.counter {
 		display: flex;
 		justify-content: space-between;
-		width: 80%;
-		margin: 40px auto;
+        align-items: center;
+        width: 90%;
+        height: 65vh;
+		margin: auto ;
         
        
 		&__work,
@@ -234,23 +186,38 @@ body {
 			align-items: center;
 			justify-content: center;
 			border-radius: 10px;
-            z-index: 100;
 			transition: all 0.3s ease-in-out;
 			&:hover {
 				cursor: pointer;
 				transform: scale(1.1);
 			}
 			.counter__text {
-                font-size: 20px;
-				margin-bottom: 20px;
+                font-size: 2rem;
+				margin-bottom: 2rem;
 			}
 			.work-time,
 			.measurements-time,
 			.rearming-time,
 			.failure-time {
-				font-size: 40px;
+				font-size: 4rem;
+                padding-bottom: 1rem;
 			}
 		}
+        &__work {
+            background-color: rgb(39, 172, 29);
+        }
+
+        &__measurements {
+            background-color: rgb(234, 228, 51);
+        }
+
+        &__rearming {
+            background-color: rgb(228, 148, 50);
+        }
+
+        &__failure {
+            background-color: rgb(244, 55, 55);
+        }
       
 	}
 }

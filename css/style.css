@@ -20,7 +20,7 @@ body {
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 15vh;
+  height: 10vh;
   background-color: rgb(245, 248, 249);
 }
 .header__space {
@@ -40,7 +40,7 @@ body {
 .header__current-date {
   position: absolute;
   right: 30px;
-  top: 30px;
+  top: auto;
   text-align: center;
 }
 .header__day {
@@ -57,6 +57,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 5vh;
+  margin-top: 2rem;
   color: #fff;
 }
 .menu__title {
@@ -148,8 +149,10 @@ body {
 .timer .counter {
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  margin: 40px auto;
+  align-items: center;
+  width: 90%;
+  height: 65vh;
+  margin: auto;
 }
 .timer .counter__work, .timer .counter__measurements, .timer .counter__rearming, .timer .counter__failure {
   background-color: lightgray;
@@ -160,7 +163,6 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  z-index: 100;
   transition: all 0.3s ease-in-out;
 }
 .timer .counter__work:hover, .timer .counter__measurements:hover, .timer .counter__rearming:hover, .timer .counter__failure:hover {
@@ -168,8 +170,8 @@ body {
   transform: scale(1.1);
 }
 .timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 .timer .counter__work .work-time,
 .timer .counter__work .measurements-time,
@@ -184,7 +186,20 @@ body {
 .timer .counter__failure .measurements-time,
 .timer .counter__failure .rearming-time,
 .timer .counter__failure .failure-time {
-  font-size: 40px;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+.timer .counter__work {
+  background-color: rgb(39, 172, 29);
+}
+.timer .counter__measurements {
+  background-color: rgb(234, 228, 51);
+}
+.timer .counter__rearming {
+  background-color: rgb(228, 148, 50);
+}
+.timer .counter__failure {
+  background-color: rgb(244, 55, 55);
 }
 
 .footer {
