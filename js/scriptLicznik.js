@@ -15,9 +15,10 @@ const currentData = () => {
 	currentDay.innerHTML = date
 }
 
-// currentData()
+currentData()
 
 // Stoper function
+const logInTime = document.querySelector('.counter__log-inTime')
 const workSquare = document.querySelector('.counter__work')
 const measurementsSquare = document.querySelector('.counter__measurements')
 const rearmingSquare = document.querySelector('.counter__rearming')
@@ -47,7 +48,12 @@ function displayTime(counter, element) {
 		':' +
 		(seconds < 10 ? '0' + seconds : seconds)
 }
-
+function startAllTimeInterval() {
+	workInterval = setInterval(() => {
+		workCounter++
+		displayTime(workCounter, document.querySelector('.log-in-time'))
+	}, 1000)
+}
 function startWorkInterval() {
 	workInterval = setInterval(() => {
 		workCounter++
@@ -129,7 +135,7 @@ function failure() {
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
 }
-
+// window.addEventListener('DOMContentLoaded', () => {startAllTimeInterval()})
 workSquare.addEventListener('click', work)
 measurementsSquare.addEventListener('click', measurements)
 rearmingSquare.addEventListener('click', rearming)

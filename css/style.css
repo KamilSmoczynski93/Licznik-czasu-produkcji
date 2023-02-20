@@ -146,13 +146,42 @@ body {
   margin: 0 3rem 0 0;
 }
 
+.log-inTime .counter {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 10rem auto;
+}
+.log-inTime .counter__log-inTime {
+  background-color: lightgray;
+  width: 30%;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.log-inTime .counter__log-inTime .counter__text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.log-inTime .counter__log-inTime .log-in-time {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.log-inTime .counter__log-inTime {
+  background-color: rgb(252, 252, 249);
+}
+
 .timer .counter {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 65vh;
-  margin: auto;
+  height: 10vh;
+  margin: 0 auto;
 }
 .timer .counter__work, .timer .counter__measurements, .timer .counter__rearming, .timer .counter__failure {
   background-color: lightgray;

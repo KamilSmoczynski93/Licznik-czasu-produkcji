@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>WAKMET Timer</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__space">
+            <h1 class="header__title">WAKMET <span class="header__color-title">Control System</span></h1>
+            <img src="./img/logo.webp" alt="zawór z logo F.A.P. Wakmet" class="header__img">
+            <div class="header__current-date">
+                <p class="header__day"></p>
+                <p class="header__timer"></p>
+            </div>
+
+
+        </div>
+    </header>
+
+    <nav class="menu">
+        <div class="menu__bgc">
+            <div class="menu__title">
+                <a href="./index.html" class="menu__start">Start</a>
+            </div>
+            <div class="menu__title">
+                <a href="./licznik.html" class="menu__timer">Licznik</a>
+            </div>
+            <div class="menu__title">
+                <a href="#" class="menu__sum">Zestawienie</a>
+            </div>
+        </div>
+    </nav>
+
+    <table class="daily">
+        <thead>
+          <tr class="title">
+            <th colspan="6" class="title-name">zestawienie dzienne</th>
+          </tr>
+          <tr>
+            <th class="month">Dzień Miesiąca</th>
+            <th class="name">Praca</th>
+            <th class="name">Pomiary</th>
+            <th class="name">Przezbrojenie</th>
+            <th class="name">Awaria</th>
+            <th class="name">Suma</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr class="currentDay1">
+                <td class="number">1</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay2">
+                <td class="number">2</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay3">
+                <td class="number">3</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay4">
+                <td class="number">4</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay5">
+                <td class="number">5</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay6">
+                <td class="number">6</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay7">
+                <td class="number">7</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay8">
+                <td class="number">8</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay9">
+                <td class="number">9</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay10">
+                <td class="number">10</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay11">
+                <td class="number">11</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay12">
+                <td class="number">12</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay13">
+                <td class="number">13</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay14">
+                <td class="number">14</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay15">
+                <td class="number">15</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay16">
+                <td class="number">16</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay17">
+                <td class="number">17</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay18">
+                <td class="number">18</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay19">
+                <td class="number">19</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay20">
+                <td class="number">20</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay21">
+                <td class="number">21</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay22">
+                <td class="number">22</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay23">
+                <td class="number">23</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay24">
+                <td class="number">24</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay25">
+                <td class="number">25</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay26">
+                <td class="number">26</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay27">
+                <td class="number">27</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay28">
+                <td class="number">28</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay29">
+                <td class="number">29</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay30">
+                <td class="number">30</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+            <tr class="currentDay31">
+                <td class="number">31</td>
+                <td class="work">00:00:00</td>
+                <td class="measurements">00:00:00</td>
+                <td class="rearming">00:00:00</td>
+                <td class="failure">00:00:00</td>
+                <td class="sum">00:00:00</td>
+            </tr>
+        </tbody>
+      </table>
+
+
+
+    <footer class="footer">
+        <div class="footer__space">
+            <p class="footer__copy"> Copyright &copy; 2023 Kamil Smoczyński for <span class="footer__company-name">F.A.P
+                    Wakmet sp.z.o.o.</span> Wszystkie prawa zastrzeżone</p>
+
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="/js/scriptLicznik.js"></script>
+</body>
+
+</html>
