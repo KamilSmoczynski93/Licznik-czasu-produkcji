@@ -62,7 +62,7 @@ body {
 		align-items: center;
 		width: 100vw;
 		height: 5vh;
-        margin-top: 2rem;
+		margin-top: 2rem;
 		color: #fff;
 	}
 
@@ -162,13 +162,13 @@ body {
 	}
 }
 .log-inTime {
-    .counter {
+	.counter {
 		display: flex;
 		justify-content: center;
-        width: 90%;
+		width: 90%;
 		margin: 10rem auto;
 
-        &__log-inTime{
+		&__log-inTime {
 			background-color: lightgray;
 			width: 30%;
 			height: 8rem;
@@ -177,38 +177,32 @@ body {
 			align-items: center;
 			justify-content: center;
 			border-radius: 10px;
-			
+
 			.counter__text {
-                font-size: 1.5rem;
-                font-weight: bold;
+				font-size: 1.5rem;
+				font-weight: bold;
 				margin-bottom: 1rem;
 			}
-			.log-in-time
-			 {
+			.log-in-time {
 				font-size: 2rem;
-                padding-bottom: 1rem;
+				padding-bottom: 1rem;
 			}
 		}
-        &__log-inTime {
-            background-color: rgb(252, 252, 249);
-        }
-
-      
-      
-    }
+		&__log-inTime {
+			background-color: rgb(252, 252, 249);
+		}
+	}
 }
-
 
 .timer {
 	.counter {
 		display: flex;
 		justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        height: 10vh;
-		margin: 0 auto ;
-        
-       
+		align-items: center;
+		width: 90%;
+		height: 10vh;
+		margin: 0 auto;
+
 		&__work,
 		&__measurements,
 		&__rearming,
@@ -227,7 +221,7 @@ body {
 				transform: scale(1.1);
 			}
 			.counter__text {
-                font-size: 2rem;
+				font-size: 2rem;
 				margin-bottom: 2rem;
 			}
 			.work-time,
@@ -235,26 +229,48 @@ body {
 			.rearming-time,
 			.failure-time {
 				font-size: 4rem;
-                padding-bottom: 1rem;
+				padding-bottom: 1rem;
 			}
 		}
-        &__work {
-            background-color: rgb(39, 172, 29);
-        }
+		&__work {
+			background-color: rgb(39, 172, 29);
+		}
 
-        &__measurements {
-            background-color: rgb(234, 228, 51);
-        }
+		&__measurements {
+			background-color: rgb(234, 228, 51);
+		}
 
-        &__rearming {
-            background-color: rgb(228, 148, 50);
-        }
+		&__rearming {
+			background-color: rgb(228, 148, 50);
+		}
 
-        &__failure {
-            background-color: rgb(244, 55, 55);
-        }
-      
+		&__failure {
+			background-color: rgb(244, 55, 55);
+		}
 	}
+}
+
+.daily {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	.title-name {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		border-bottom: 2px solid rgb(207, 46, 46);
+	}
+    th {
+        padding-top: 2rem;
+        width: 80px;
+        border-bottom: 1px solid black;
+    }
+   
+    .name-operation {
+        .name {
+            font-size: 1rem;
+        }
+    }
 }
 
 .footer {
