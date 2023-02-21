@@ -80,6 +80,37 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.menu .log-out {
+  border: none;
+  margin-left: 30rem;
+}
+.menu .log-out:hover {
+  background-color: transparent;
+}
+.menu .color-button {
+  box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+  background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color: #79bbff;
+  border-radius: 6px;
+  border: 1px solid #84bbf3;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+.menu .color-button:hover {
+  background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color: #378de5;
+}
+.menu .color-button:active {
+  position: relative;
+  top: 1px;
+}
 
 .login-body {
   display: flex;
@@ -87,6 +118,9 @@ body {
   align-items: center;
   width: 100vw;
   height: 75vh;
+}
+.login-body .body-img {
+  width: 250px;
 }
 .login-body .login {
   position: relative;
@@ -175,6 +209,9 @@ body {
   background-color: rgb(252, 252, 249);
 }
 
+.timer {
+  height: 50vh;
+}
 .timer .counter {
   display: flex;
   justify-content: space-between;
@@ -231,36 +268,52 @@ body {
   background-color: rgb(244, 55, 55);
 }
 
-.daily {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+.table {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 5vh;
+  margin-bottom: 3rem;
 }
-.daily .title-name {
+.table .weekly, .table .monthly {
+  margin-top: 5rem;
+}
+.table .table-style .title-name {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-bottom: 2px solid rgb(207, 46, 46);
 }
-.daily th {
+.table .table-style th {
   padding-top: 2rem;
   width: 80px;
   border-bottom: 1px solid black;
 }
-.daily .name-operation .name {
-  font-size: 1rem;
+.table .table-style .name-operation .name {
+  font-size: 1.5rem;
+}
+.table .table-style td {
+  font-size: 1.5rem;
+  border: 1px solid black;
+  padding: 5px 50px;
+}
+.table .table-style .sum {
+  color: rgb(207, 46, 46);
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
   width: 100vw;
-  height: 7vh;
+  height: 5vh;
+  bottom: 0;
   font-size: 1.2rem;
   background-color: rgb(40, 40, 40);
   color: #fff;
+  margin-top: 5rem;
 }
 .footer__company-name {
   color: rgb(207, 46, 46);

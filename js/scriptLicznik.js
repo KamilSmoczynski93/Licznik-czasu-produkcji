@@ -92,6 +92,10 @@ function work() {
 	clearInterval(failureInterval)
 
 	startWorkInterval()
+
+	measurementsSquare.addEventListener('click', measurements)
+	rearmingSquare.addEventListener('click', rearming)
+	failureSquare.addEventListener('click', failure)
 }
 
 function measurements() {
@@ -140,3 +144,26 @@ workSquare.addEventListener('click', work)
 measurementsSquare.addEventListener('click', measurements)
 rearmingSquare.addEventListener('click', rearming)
 failureSquare.addEventListener('click', failure)
+
+
+
+// Switch to a table view with a summary of times
+
+const dailyTable = document.querySelector('.table')
+const timerSection = document.querySelector('.timer')
+const btnTimer = document.querySelector('.menu__timer')
+const btnSum = document.querySelector('.menu__sum')
+
+const sumClick = () => {
+	dailyTable.style.display = 'flex'
+	timerSection.style.display = 'none'
+}
+const timerClick = () => {
+	timerSection.style.display = 'block'
+	dailyTable.style.display = 'none'
+}
+
+
+btnTimer.addEventListener('click', timerClick)
+btnSum.addEventListener('click', sumClick)
+
