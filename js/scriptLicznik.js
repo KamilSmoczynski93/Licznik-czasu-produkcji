@@ -23,9 +23,15 @@ const workSquare = document.querySelector('.counter__work')
 const measurementsSquare = document.querySelector('.counter__measurements')
 const rearmingSquare = document.querySelector('.counter__rearming')
 const failureSquare = document.querySelector('.counter__failure')
+const numberDaysInTable = document.querySelectorAll('.number')
+const workElementInTable = document.querySelectorAll('.work')
+const btnLogOut = document.querySelector('.color-button')
+
+
 
 let workCounter = 0
 let workInterval = null
+let test
 
 let measurementsCounter = 0
 let measurementsInterval = null
@@ -84,14 +90,36 @@ function startFailureInterval() {
 	failureSquare.removeEventListener('click', failure)
 }
 
+const actualDay = new Date()
+function entryToTheTable() {
+	
+
+
+	numberDaysInTable.forEach(e => {
+		if (parseInt(e.textContent) == actualDay.getDate()) {
+			const downloadWorkElement = document.getElementById('workId').textContent
+			const downloadMeasurementsElement = document.getElementById('measurementsId').textContent
+			const downloadRearmingElement = document.getElementById('rearmingId').textContent
+			const downloadFailureElement = document.getElementById('failureId').textContent
+
+			e.nextElementSibling.textContent = downloadWorkElement
+			e.nextElementSibling.nextElementSibling.textContent = downloadMeasurementsElement
+			e.nextElementSibling.nextElementSibling.nextElementSibling.textContent = downloadRearmingElement
+			e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.textContent = downloadFailureElement
+		}
+	})
+
+}
+
 function work() {
 	clearInterval(measurementsInterval)
-
+	
 	clearInterval(rearmingInterval)
-
+	
 	clearInterval(failureInterval)
-
+	
 	startWorkInterval()
+	
 
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
@@ -107,6 +135,7 @@ function measurements() {
 
 	startMeasurementsInterval()
 
+
 	workSquare.addEventListener('click', work)
 	rearmingSquare.addEventListener('click', rearming)
 	failureSquare.addEventListener('click', failure)
@@ -120,6 +149,7 @@ function rearming() {
 	clearInterval(failureInterval)
 
 	startRearmingInterval()
+
 
 	workSquare.addEventListener('click', work)
 	measurementsSquare.addEventListener('click', measurements)
@@ -135,6 +165,7 @@ function failure() {
 
 	startFailureInterval()
 
+
 	workSquare.addEventListener('click', work)
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
@@ -144,7 +175,7 @@ workSquare.addEventListener('click', work)
 measurementsSquare.addEventListener('click', measurements)
 rearmingSquare.addEventListener('click', rearming)
 failureSquare.addEventListener('click', failure)
-
+btnLogOut.addEventListener('click', entryToTheTable)
 
 
 // Switch to a table view with a summary of times
@@ -163,7 +194,8 @@ const timerClick = () => {
 	dailyTable.style.display = 'none'
 }
 
-
 btnTimer.addEventListener('click', timerClick)
 btnSum.addEventListener('click', sumClick)
+
+
 
