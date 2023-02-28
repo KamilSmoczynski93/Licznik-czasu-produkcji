@@ -24,14 +24,15 @@ const measurementsSquare = document.querySelector('.counter__measurements')
 const rearmingSquare = document.querySelector('.counter__rearming')
 const failureSquare = document.querySelector('.counter__failure')
 const numberDaysInTable = document.querySelectorAll('.number')
-const workElementInTable = document.querySelectorAll('.work')
+// const workElementInTable = document.querySelectorAll('.work')
+// const measurementsElementInTable = document.querySelectorAll('.measurements')
+// const rearmingElementInTable = document.querySelectorAll('.rearming')
+// const failureElementInTable = document.querySelectorAll('.failure')
 const btnLogOut = document.querySelector('.color-button')
-
-
+const actualDay = new Date()
 
 let workCounter = 0
 let workInterval = null
-let test
 
 let measurementsCounter = 0
 let measurementsInterval = null
@@ -67,6 +68,7 @@ function startWorkInterval() {
 	}, 1000)
 	workSquare.removeEventListener('click', work)
 }
+
 function startMeasurementsInterval() {
 	measurementsInterval = setInterval(() => {
 		measurementsCounter++
@@ -90,36 +92,14 @@ function startFailureInterval() {
 	failureSquare.removeEventListener('click', failure)
 }
 
-const actualDay = new Date()
-function entryToTheTable() {
-	
-
-
-	numberDaysInTable.forEach(e => {
-		if (parseInt(e.textContent) == actualDay.getDate()) {
-			const downloadWorkElement = document.getElementById('workId').textContent
-			const downloadMeasurementsElement = document.getElementById('measurementsId').textContent
-			const downloadRearmingElement = document.getElementById('rearmingId').textContent
-			const downloadFailureElement = document.getElementById('failureId').textContent
-
-			e.nextElementSibling.textContent = downloadWorkElement
-			e.nextElementSibling.nextElementSibling.textContent = downloadMeasurementsElement
-			e.nextElementSibling.nextElementSibling.nextElementSibling.textContent = downloadRearmingElement
-			e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.textContent = downloadFailureElement
-		}
-	})
-
-}
-
 function work() {
 	clearInterval(measurementsInterval)
-	
+
 	clearInterval(rearmingInterval)
-	
+
 	clearInterval(failureInterval)
-	
+
 	startWorkInterval()
-	
 
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
@@ -135,7 +115,6 @@ function measurements() {
 
 	startMeasurementsInterval()
 
-
 	workSquare.addEventListener('click', work)
 	rearmingSquare.addEventListener('click', rearming)
 	failureSquare.addEventListener('click', failure)
@@ -149,7 +128,6 @@ function rearming() {
 	clearInterval(failureInterval)
 
 	startRearmingInterval()
-
 
 	workSquare.addEventListener('click', work)
 	measurementsSquare.addEventListener('click', measurements)
@@ -165,7 +143,6 @@ function failure() {
 
 	startFailureInterval()
 
-
 	workSquare.addEventListener('click', work)
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
@@ -175,8 +152,6 @@ workSquare.addEventListener('click', work)
 measurementsSquare.addEventListener('click', measurements)
 rearmingSquare.addEventListener('click', rearming)
 failureSquare.addEventListener('click', failure)
-btnLogOut.addEventListener('click', entryToTheTable)
-
 
 // Switch to a table view with a summary of times
 
@@ -197,5 +172,70 @@ const timerClick = () => {
 btnTimer.addEventListener('click', timerClick)
 btnSum.addEventListener('click', sumClick)
 
+// function that writes values to a table
 
+function entryToTheTable() {
+	numberDaysInTable.forEach(e => {
+		if (parseInt(e.textContent) == actualDay.getDate()) {
+			const downloadWorkElement = document.getElementById('workId').textContent
+			const downloadMeasurementsElement = document.getElementById('measurementsId').textContent
+			const downloadRearmingElement = document.getElementById('rearmingId').textContent
+			const downloadFailureElement = document.getElementById('failureId').textContent
 
+			e.nextElementSibling.textContent = downloadWorkElement
+			e.nextElementSibling.nextElementSibling.textContent = downloadMeasurementsElement
+			e.nextElementSibling.nextElementSibling.nextElementSibling.textContent = downloadRearmingElement
+			e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.textContent = downloadFailureElement
+
+			// changing string to number, function that sums values from table
+
+			const word = e.nextElementSibling.textContent.split(':')
+			const measurements = e.nextElementSibling.nextElementSibling.textContent.split(':')
+			const rearming = e.nextElementSibling.nextElementSibling.nextElementSibling.textContent.split(':')
+			const failure =
+				e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.textContent.split(':')
+			const sum =
+				e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.textContent.split(
+					':'
+				)
+
+			const workSec = parseInt(word[2])
+			const workMin = parseInt(word[1])
+			const workHour = parseInt(word[0])
+
+			const measurementsSec = parseInt(measurements[2])
+			const measurementsMin = parseInt(measurements[1])
+			const measurementsHour = parseInt(measurements[0])
+
+			const rearmingSec = parseInt(rearming[2])
+			const rearmingMin = parseInt(rearming[1])
+			const rearmingHour = parseInt(rearming[0])
+
+			const failureSec = parseInt(failure[2])
+			const failureMin = parseInt(failure[1])
+			const failureHour = parseInt(failure[0])
+
+			const sumSec = workSec + measurementsSec + rearmingSec + failureSec
+			const secRest = sumSec % 60
+			const secSplit = sumSec / 60
+
+			const sumMin = workMin + measurementsMin + rearmingMin + failureMin + Math.floor(secSplit)
+			const minRest = sumMin % 60
+			const minSplit = sumMin / 60
+
+			const sumHour = workHour + measurementsHour + rearmingHour + failureHour + Math.floor(minSplit)
+
+			const sumTextInTable =
+				(sumHour < 10 ? '0' + sumHour : sumHour) +
+				':' +
+				(minRest < 10 ? '0' + minRest : minRest) +
+				':' +
+				(secRest < 10 ? '0' + secRest : secRest)
+
+			e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.textContent =
+				sumTextInTable
+		}
+	})
+}
+
+btnLogOut.addEventListener('click', entryToTheTable)
