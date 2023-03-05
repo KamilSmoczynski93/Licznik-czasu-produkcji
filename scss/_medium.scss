@@ -1,0 +1,68 @@
+@media (max-width: 900px) {
+    .timer {
+        height: 46vh;
+        .counter {
+    
+            &__work,
+            &__measurements,
+            &__rearming,
+            &__failure {
+               
+                .counter__text {
+                    font-size: 2rem;
+                }
+                .work-time,
+                .measurements-time,
+                .rearming-time,
+                .failure-time {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .table {
+        margin-top: 1vh;
+        margin-bottom: 3rem;
+    
+        .weekly, .monthly {
+            margin-top: 3rem;
+        }
+    
+        .table-style {
+            .title-name {
+                font-size: 2rem;
+            }
+            th {
+                padding-top: 1rem;
+            }
+    
+            .name-operation {
+                .name {
+                    font-size: 1.3rem;
+                }
+            }
+            td {
+                font-size: 1.3rem;
+                border: 1px solid #000000;
+                padding: 5px 30px;
+            }
+            tr {
+                .number {
+                    text-align: center;
+                }
+            }
+            .sum {
+                color: $red;
+            }
+        }
+    }
+
+    .monthly {
+        tr {
+            .numberMonth {
+                text-align: center;
+            }
+        }
+    }
+}

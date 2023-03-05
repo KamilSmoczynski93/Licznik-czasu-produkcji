@@ -8,7 +8,7 @@ const timeClock = () => {
 	clock.innerHTML = d.toLocaleTimeString()
 }
 
-// timeClock()
+timeClock()
 
 const currentData = () => {
 	let date = new Date().toLocaleDateString()
@@ -24,11 +24,7 @@ const measurementsSquare = document.querySelector('.counter__measurements')
 const rearmingSquare = document.querySelector('.counter__rearming')
 const failureSquare = document.querySelector('.counter__failure')
 const numberDaysInTable = document.querySelectorAll('.number')
-// const workElementInTable = document.querySelectorAll('.work')
-// const measurementsElementInTable = document.querySelectorAll('.measurements')
-// const rearmingElementInTable = document.querySelectorAll('.rearming')
-// const failureElementInTable = document.querySelectorAll('.failure')
-const btnLogOut = document.querySelector('.color-button')
+const btnLogOut = document.querySelector('.test-text')
 const actualDay = new Date()
 
 let workCounter = 0
@@ -147,7 +143,7 @@ function failure() {
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
 }
-// window.addEventListener('DOMContentLoaded', () => {startAllTimeInterval()})
+window.addEventListener('DOMContentLoaded', () => {startAllTimeInterval()})
 workSquare.addEventListener('click', work)
 measurementsSquare.addEventListener('click', measurements)
 rearmingSquare.addEventListener('click', rearming)
@@ -189,7 +185,7 @@ function entryToTheTable() {
 
 			// changing string to number, function that sums values from table
 
-			const word = e.nextElementSibling.textContent.split(':')
+			const work = e.nextElementSibling.textContent.split(':')
 			const measurements = e.nextElementSibling.nextElementSibling.textContent.split(':')
 			const rearming = e.nextElementSibling.nextElementSibling.nextElementSibling.textContent.split(':')
 			const failure =
@@ -199,9 +195,9 @@ function entryToTheTable() {
 					':'
 				)
 
-			const workSec = parseInt(word[2])
-			const workMin = parseInt(word[1])
-			const workHour = parseInt(word[0])
+			const workSec = parseInt(work[2])
+			const workMin = parseInt(work[1])
+			const workHour = parseInt(work[0])
 
 			const measurementsSec = parseInt(measurements[2])
 			const measurementsMin = parseInt(measurements[1])

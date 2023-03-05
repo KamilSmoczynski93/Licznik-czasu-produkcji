@@ -1,3 +1,5 @@
+@import './colors';
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -11,13 +13,13 @@ html {
 body {
 	background: linear-gradient(
 		90deg,
-		rgba(112, 112, 113, 1) 0%,
-		rgba(198, 198, 203, 1) 65%,
-		rgba(245, 248, 249, 1) 100%
+		#707071 0%,
+		#c6c6cb 65%,
+		#f5f8f9 100%
 	);
 	background-attachment: fixed;
 	font-family: 'Montserrat', sans-serif;
-	color: rgb(10, 10, 10);
+	color: #0a0a0a;
 }
 
 .header {
@@ -25,7 +27,7 @@ body {
 	align-items: center;
 	width: 100vw;
 	height: 10vh;
-	background-color: rgb(245, 248, 249);
+	background-color: #f5f8f9;
 	&__space {
 		display: flex;
 		font-size: 1.5rem;
@@ -34,11 +36,11 @@ body {
 		width: 50px;
 	}
 	&__title {
-		color: rgb(207, 46, 46);
+		color: $red;
 		margin-left: 20px;
 	}
 	&__color-title {
-		color: black;
+		color: #000000;
 	}
 	&__current-date {
 		position: absolute;
@@ -48,7 +50,7 @@ body {
 	}
 	&__day {
 		font-weight: bold;
-		border-bottom: 1px solid rgb(207, 46, 46);
+		border-bottom: 1px solid $red;
 	}
 	&__timer {
 		padding-top: 5px;
@@ -63,7 +65,7 @@ body {
 		width: 100vw;
 		height: 5vh;
 		margin-top: 2rem;
-		color: #fff;
+		color: $white;
 	}
 
 	&__title {
@@ -74,25 +76,25 @@ body {
 		width: 15rem;
 		height: 3rem;
 		font-size: 1.4rem;
-		border: 1px solid #fff;
+		border: 1px solid $white;
 		border-radius: 5px;
 
 		cursor: pointer;
 		transition: background-color 0.3s;
 
 		&:hover {
-			background-color: rgb(207, 46, 46);
+			background-color: $red;
 		}
 
 		a {
-			color: #fff;
+			color: $white;
 			text-decoration: none;
 		}
         
 	}
   .log-out {
     border: none;
-    margin-left: 30rem;
+    margin-left: auto;
   }
 
   .log-out:hover {
@@ -106,7 +108,7 @@ body {
         border:1px solid #84bbf3;
         display:inline-block;
         cursor:pointer;
-        color:#ffffff;
+        color:$white;
         font-family:Arial;
         font-size:15px;
         font-weight:bold;
@@ -132,7 +134,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	width: 100vw;
-	height: 75vh;
+	height: 80.7vh;
 
     .body-img {
         width: 250px;
@@ -144,7 +146,7 @@ body {
 		height: 40rem;
 		background-color: transparent;
 		border-radius: 2rem;
-		border: 2px solid #fff;
+		border: 2px solid $white;
 
 		&__title {
 			font-size: 1.5rem;
@@ -167,14 +169,20 @@ body {
 			font-size: 1.3rem;
 			padding: 0 3rem 0.5rem;
 		}
-		&__input {
+		&__input, &__input-pass {
 			position: relative;
 			width: 24rem;
 			margin: 0 3rem 2rem;
 			padding: 1rem 1rem;
 			border-radius: 0.6rem;
-			border: 0.2rem solid rgb(207, 46, 46);
+			border: 0.2rem solid $red;
 		}
+        
+        &__error {
+            position: relative;
+            margin: 0 3rem 2rem;
+            color: $red;
+        }
 
 		&__button {
 			position: relative;
@@ -183,14 +191,14 @@ body {
 			border-radius: 10px;
 			border: none;
 			outline: none;
-			background-color: rgb(207, 46, 46);
+			background-color: $red;
 			transition: background-color 0.3s;
-			color: #fff;
+			color: $white;
 
 			&:hover {
-				background-color: rgba(207, 46, 46, 0.4);
+				background-color: $buttonColor;
 				color: black;
-				border: 1px solid rgb(207, 46, 46);
+				border: 1px solid $red;
 			}
 		}
 		.button1 {
@@ -201,6 +209,30 @@ body {
 		}
 	}
 }
+
+.test {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 40px;
+    .test-text {
+        font-size: 1.5rem;
+        border: 1px solid black;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        background-color: white;
+        cursor: pointer;
+        transition: transform .3s;
+
+        span{
+            font-weight: bold;
+        }
+    }
+    .test-text:hover {
+        transform: scale(1.05);
+    }
+}
+
 .log-inTime {
 	.counter {
 		display: flex;
@@ -248,7 +280,7 @@ body {
 		&__measurements,
 		&__rearming,
 		&__failure {
-			background-color: lightgray;
+			background-color: #d3d3d3;
 			width: 22%;
 			height: 150px;
 			display: flex;
@@ -274,19 +306,19 @@ body {
 			}
 		}
 		&__work {
-			background-color: rgb(39, 172, 29);
+			background-color: #27ac1d;
 		}
 
 		&__measurements {
-			background-color: rgb(234, 228, 51);
+			background-color: #eae433;
 		}
 
 		&__rearming {
-			background-color: rgb(228, 148, 50);
+			background-color: #e49432;
 		}
 
 		&__failure {
-			background-color: rgb(244, 55, 55);
+			background-color: #f43737;
 		}
 	}
 }
@@ -307,12 +339,12 @@ body {
 		.title-name {
 			text-transform: uppercase;
 			font-size: 2rem;
-			border-bottom: 2px solid rgb(207, 46, 46);
+			border-bottom: 2px solid $red;
 		}
 		th {
 			padding-top: 2rem;
 			width: 80px;
-			border-bottom: 1px solid black;
+			border-bottom: 1px solid #000000;
 		}
 
 		.name-operation {
@@ -322,11 +354,11 @@ body {
 		}
 		td {
 			font-size: 1.5rem;
-			border: 1px solid black;
+			border: 1px solid #000000;
 			padding: 5px 50px;
 		}
 		.sum {
-			color: rgb(207, 46, 46);
+			color: $red;
 		}
 	}
 }
@@ -341,10 +373,14 @@ body {
 	bottom: 0;
 	font-size: 1.2rem;
 	background-color: rgb(40, 40, 40);
-	color: #fff;
+	color: $white;
 	margin-top: 5rem;
 
 	&__company-name {
-		color: rgb(207, 46, 46);
+		color: $red;
 	}
 }
+
+
+@import './small';
+@import './medium';

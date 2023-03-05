@@ -10,10 +10,10 @@ html {
 }
 
 body {
-  background: linear-gradient(90deg, rgb(112, 112, 113) 0%, rgb(198, 198, 203) 65%, rgb(245, 248, 249) 100%);
+  background: linear-gradient(90deg, #707071 0%, #c6c6cb 65%, #f5f8f9 100%);
   background-attachment: fixed;
   font-family: "Montserrat", sans-serif;
-  color: rgb(10, 10, 10);
+  color: #0a0a0a;
 }
 
 .header {
@@ -21,7 +21,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 10vh;
-  background-color: rgb(245, 248, 249);
+  background-color: #f5f8f9;
 }
 .header__space {
   display: flex;
@@ -31,11 +31,11 @@ body {
   width: 50px;
 }
 .header__title {
-  color: rgb(207, 46, 46);
+  color: #cf2e2e;
   margin-left: 20px;
 }
 .header__color-title {
-  color: black;
+  color: #000000;
 }
 .header__current-date {
   position: absolute;
@@ -45,7 +45,7 @@ body {
 }
 .header__day {
   font-weight: bold;
-  border-bottom: 1px solid rgb(207, 46, 46);
+  border-bottom: 1px solid #cf2e2e;
 }
 .header__timer {
   padding-top: 5px;
@@ -58,7 +58,7 @@ body {
   width: 100vw;
   height: 5vh;
   margin-top: 2rem;
-  color: #fff;
+  color: #ffffff;
 }
 .menu__title {
   display: flex;
@@ -68,21 +68,21 @@ body {
   width: 15rem;
   height: 3rem;
   font-size: 1.4rem;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 .menu__title:hover {
-  background-color: rgb(207, 46, 46);
+  background-color: #cf2e2e;
 }
 .menu__title a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 .menu .log-out {
   border: none;
-  margin-left: 30rem;
+  margin-left: auto;
 }
 .menu .log-out:hover {
   background-color: transparent;
@@ -117,7 +117,7 @@ body {
   justify-content: space-around;
   align-items: center;
   width: 100vw;
-  height: 75vh;
+  height: 80.7vh;
 }
 .login-body .body-img {
   width: 250px;
@@ -128,7 +128,7 @@ body {
   height: 40rem;
   background-color: transparent;
   border-radius: 2rem;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
 }
 .login-body .login__title {
   font-size: 1.5rem;
@@ -149,13 +149,18 @@ body {
   font-size: 1.3rem;
   padding: 0 3rem 0.5rem;
 }
-.login-body .login__input {
+.login-body .login__input, .login-body .login__input-pass {
   position: relative;
   width: 24rem;
   margin: 0 3rem 2rem;
   padding: 1rem 1rem;
   border-radius: 0.6rem;
-  border: 0.2rem solid rgb(207, 46, 46);
+  border: 0.2rem solid #cf2e2e;
+}
+.login-body .login__error {
+  position: relative;
+  margin: 0 3rem 2rem;
+  color: #cf2e2e;
 }
 .login-body .login__button {
   position: relative;
@@ -164,20 +169,42 @@ body {
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color: rgb(207, 46, 46);
+  background-color: #cf2e2e;
   transition: background-color 0.3s;
-  color: #fff;
+  color: #ffffff;
 }
 .login-body .login__button:hover {
   background-color: rgba(207, 46, 46, 0.4);
   color: black;
-  border: 1px solid rgb(207, 46, 46);
+  border: 1px solid #cf2e2e;
 }
 .login-body .login .button1 {
   margin: 4rem 3rem;
 }
 .login-body .login .button2 {
   margin: 0 3rem 0 0;
+}
+
+.test {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 40px;
+}
+.test .test-text {
+  font-size: 1.5rem;
+  border: 1px solid black;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.test .test-text span {
+  font-weight: bold;
+}
+.test .test-text:hover {
+  transform: scale(1.05);
 }
 
 .log-inTime .counter {
@@ -221,7 +248,7 @@ body {
   margin: 0 auto;
 }
 .timer .counter__work, .timer .counter__measurements, .timer .counter__rearming, .timer .counter__failure {
-  background-color: lightgray;
+  background-color: #d3d3d3;
   width: 22%;
   height: 150px;
   display: flex;
@@ -256,16 +283,16 @@ body {
   padding-bottom: 1rem;
 }
 .timer .counter__work {
-  background-color: rgb(39, 172, 29);
+  background-color: #27ac1d;
 }
 .timer .counter__measurements {
-  background-color: rgb(234, 228, 51);
+  background-color: #eae433;
 }
 .timer .counter__rearming {
-  background-color: rgb(228, 148, 50);
+  background-color: #e49432;
 }
 .timer .counter__failure {
-  background-color: rgb(244, 55, 55);
+  background-color: #f43737;
 }
 
 .table {
@@ -283,23 +310,23 @@ body {
 .table .table-style .title-name {
   text-transform: uppercase;
   font-size: 2rem;
-  border-bottom: 2px solid rgb(207, 46, 46);
+  border-bottom: 2px solid #cf2e2e;
 }
 .table .table-style th {
   padding-top: 2rem;
   width: 80px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #000000;
 }
 .table .table-style .name-operation .name {
   font-size: 1.5rem;
 }
 .table .table-style td {
   font-size: 1.5rem;
-  border: 1px solid black;
+  border: 1px solid #000000;
   padding: 5px 50px;
 }
 .table .table-style .sum {
-  color: rgb(207, 46, 46);
+  color: #cf2e2e;
 }
 
 .footer {
@@ -312,9 +339,167 @@ body {
   bottom: 0;
   font-size: 1.2rem;
   background-color: rgb(40, 40, 40);
-  color: #fff;
+  color: #ffffff;
   margin-top: 5rem;
 }
 .footer__company-name {
-  color: rgb(207, 46, 46);
+  color: #cf2e2e;
+}
+
+@media (max-width: 540px) {
+  .header__space {
+    font-size: 1rem;
+  }
+  .header__img {
+    display: none;
+  }
+  .header__title {
+    margin-left: 10px;
+  }
+  .header__current-date {
+    font-size: 1.2rem;
+  }
+  .menu__title-sum, .menu__title-timer, .menu__title-start {
+    display: none;
+  }
+  .menu .log-out {
+    border: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .login-body {
+    height: 83vh;
+  }
+  .login-body .body-img {
+    display: none;
+  }
+  .login-body .login__description {
+    color: #000000;
+  }
+  .login-body .login__error {
+    font-size: 1.3rem;
+  }
+  .login-body .login .button1 {
+    margin: 1rem 3rem;
+  }
+  .login-body .login .button2 {
+    margin: 0 3rem 0 0;
+  }
+  .log-inTime .counter {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 6rem auto;
+  }
+  .log-inTime .counter__log-inTime {
+    background-color: lightgray;
+    width: 45%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .log-inTime .counter__log-inTime .counter__text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .log-inTime .counter__log-inTime .log-in-time {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  .log-inTime .counter__log-inTime {
+    background-color: rgb(252, 252, 249);
+  }
+  .timer {
+    height: 50vh;
+  }
+  .timer .counter__work, .timer .counter__measurements, .timer .counter__rearming, .timer .counter__failure {
+    height: 90%;
+  }
+  .timer .counter__work:hover, .timer .counter__measurements:hover, .timer .counter__rearming:hover, .timer .counter__failure:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
+    font-size: 1rem;
+    margin-bottom: 0rem;
+  }
+  .timer .counter__work .work-time,
+.timer .counter__work .measurements-time,
+.timer .counter__work .rearming-time,
+.timer .counter__work .failure-time, .timer .counter__measurements .work-time,
+.timer .counter__measurements .measurements-time,
+.timer .counter__measurements .rearming-time,
+.timer .counter__measurements .failure-time, .timer .counter__rearming .work-time,
+.timer .counter__rearming .measurements-time,
+.timer .counter__rearming .rearming-time,
+.timer .counter__rearming .failure-time, .timer .counter__failure .work-time,
+.timer .counter__failure .measurements-time,
+.timer .counter__failure .rearming-time,
+.timer .counter__failure .failure-time {
+    font-size: 1.3rem;
+    padding-bottom: 0rem;
+  }
+  .footer {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+@media (max-width: 900px) {
+  .timer {
+    height: 46vh;
+  }
+  .timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
+    font-size: 2rem;
+  }
+  .timer .counter__work .work-time,
+.timer .counter__work .measurements-time,
+.timer .counter__work .rearming-time,
+.timer .counter__work .failure-time, .timer .counter__measurements .work-time,
+.timer .counter__measurements .measurements-time,
+.timer .counter__measurements .rearming-time,
+.timer .counter__measurements .failure-time, .timer .counter__rearming .work-time,
+.timer .counter__rearming .measurements-time,
+.timer .counter__rearming .rearming-time,
+.timer .counter__rearming .failure-time, .timer .counter__failure .work-time,
+.timer .counter__failure .measurements-time,
+.timer .counter__failure .rearming-time,
+.timer .counter__failure .failure-time {
+    font-size: 2rem;
+  }
+  .table {
+    margin-top: 1vh;
+    margin-bottom: 3rem;
+  }
+  .table .weekly, .table .monthly {
+    margin-top: 3rem;
+  }
+  .table .table-style .title-name {
+    font-size: 2rem;
+  }
+  .table .table-style th {
+    padding-top: 1rem;
+  }
+  .table .table-style .name-operation .name {
+    font-size: 1.3rem;
+  }
+  .table .table-style td {
+    font-size: 1.3rem;
+    border: 1px solid #000000;
+    padding: 5px 30px;
+  }
+  .table .table-style tr .number {
+    text-align: center;
+  }
+  .table .table-style .sum {
+    color: #cf2e2e;
+  }
+  .monthly tr .numberMonth {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

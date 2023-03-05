@@ -1,0 +1,122 @@
+@media (max-width: 540px) {
+    .header {
+        &__space {
+            font-size: 1rem;
+        }
+        &__img {
+            display: none;
+        }
+        &__title {
+            margin-left: 10px;
+        }
+     
+        &__current-date {
+            font-size: 1.2rem;
+        }
+       
+    }
+    
+    .menu {
+        &__title-sum, &__title-timer, &__title-start {
+            display: none;
+        }
+      .log-out {
+        border: none;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }        
+    
+    }
+    
+    .login-body {
+    height: 83vh;
+        .body-img {
+            display: none;
+        }
+    
+        .login {
+    
+            &__description {
+                color: #000000;
+            }
+            
+            &__error {
+                font-size: 1.3rem;
+            }
+            .button1 {
+                margin: 1rem 3rem;
+            }
+            .button2 {
+                margin: 0 3rem 0 0;
+            }
+        }
+    }
+    .log-inTime {
+        .counter {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: 6rem auto;
+    
+            &__log-inTime {
+                background-color: lightgray;
+                width: 45%;
+                height: 8rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+    
+                .counter__text {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                }
+                .log-in-time {
+                    font-size: 2rem;
+                    padding-bottom: 1rem;
+                }
+            }
+            &__log-inTime {
+                background-color: rgb(252, 252, 249);
+            }
+        }
+    }
+    
+    .timer {
+        height: 50vh;
+        .counter {
+    
+            &__work,
+            &__measurements,
+            &__rearming,
+            &__failure {
+                height: 90%;
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+                .counter__text {
+                    font-size: 1rem;
+                    margin-bottom: 0rem;
+                }
+                .work-time,
+                .measurements-time,
+                .rearming-time,
+                .failure-time {
+                    font-size: 1.3rem;
+                    padding-bottom: 0rem;
+                }
+            }
+        }
+    }
+  
+    .footer {
+        margin-top: 1rem;
+        padding: 1rem;
+        text-align: center;
+    
+    }
+}
