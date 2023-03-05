@@ -177,9 +177,19 @@ function entryToTheTable() {
 			const downloadMeasurementsElement = document.getElementById('measurementsId').textContent
 			const downloadRearmingElement = document.getElementById('rearmingId').textContent
 			const downloadFailureElement = document.getElementById('failureId').textContent
-			const number = e
+			const column1 = e
+			const column2 = e.nextElementSibling
+			const column3 = e.nextElementSibling.nextElementSibling
+			const column4 = e.nextElementSibling.nextElementSibling.nextElementSibling
+			const column5 = e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling
+			const column6 = e.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling
 
-			number.style.backgroundColor = "#4BA2EA"
+			column1.style.backgroundColor = "#4BA2EA"
+			column2.style.backgroundColor = "#4BA2EA"
+			column3.style.backgroundColor = "#4BA2EA"
+			column4.style.backgroundColor = "#4BA2EA"
+			column5.style.backgroundColor = "#4BA2EA"
+			column6.style.backgroundColor = "#4BA2EA"
 
 			e.nextElementSibling.textContent = downloadWorkElement
 			e.nextElementSibling.nextElementSibling.textContent = downloadMeasurementsElement
