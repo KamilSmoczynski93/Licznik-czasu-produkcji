@@ -33,3 +33,13 @@ const goToTimer = () => {
 }
 
 login.addEventListener('click', goToTimer)
+loginInput.addEventListener('keypress', e => {
+	if (e.key === 'Enter') {
+		goToTimer()
+	}
+})
+passInput.addEventListener('keypress', e => {
+	if (e.key === 'Enter') {
+		goToTimer()
+	}
+})
