@@ -215,6 +215,8 @@ body {
     display: flex;
     justify-content: center;
     top: 40px;
+	margin-bottom: 14rem;
+	margin-top: 3rem;
     .test-text {
         font-size: 1.5rem;
         border: 1px solid black;
@@ -382,5 +384,5 @@ body {
 }
 
 
-@import './small';
 @import './medium';
+@import './small';

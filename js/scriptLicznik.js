@@ -143,7 +143,7 @@ function failure() {
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
 }
-window.addEventListener('DOMContentLoaded', () => {startAllTimeInterval()})
+// window.addEventListener('DOMContentLoaded', () => {startAllTimeInterval()})
 workSquare.addEventListener('click', work)
 measurementsSquare.addEventListener('click', measurements)
 rearmingSquare.addEventListener('click', rearming)

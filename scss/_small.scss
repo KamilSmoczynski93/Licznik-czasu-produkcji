@@ -84,6 +84,7 @@
             }
         }
     }
+   
     
     .timer {
         height: 50vh;
@@ -94,10 +95,7 @@
             &__rearming,
             &__failure {
                 height: 90%;
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.1);
-                }
+                
                 .counter__text {
                     font-size: 1rem;
                     margin-bottom: 0rem;
@@ -106,7 +104,7 @@
                 .measurements-time,
                 .rearming-time,
                 .failure-time {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     padding-bottom: 0rem;
                 }
             }
@@ -114,7 +112,7 @@
     }
   
     .footer {
-        margin-top: 1rem;
+        margin-top: 5rem;
         padding: 1rem;
         text-align: center;
     

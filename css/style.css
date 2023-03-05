@@ -190,6 +190,8 @@ body {
   display: flex;
   justify-content: center;
   top: 40px;
+  margin-bottom: 14rem;
+  margin-top: 3rem;
 }
 .test .test-text {
   font-size: 1.5rem;
@@ -346,6 +348,62 @@ body {
   color: #cf2e2e;
 }
 
+@media (max-width: 900px) {
+  .timer {
+    height: 46vh;
+  }
+  .timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
+    font-size: 2rem;
+  }
+  .timer .counter__work .work-time,
+.timer .counter__work .measurements-time,
+.timer .counter__work .rearming-time,
+.timer .counter__work .failure-time, .timer .counter__measurements .work-time,
+.timer .counter__measurements .measurements-time,
+.timer .counter__measurements .rearming-time,
+.timer .counter__measurements .failure-time, .timer .counter__rearming .work-time,
+.timer .counter__rearming .measurements-time,
+.timer .counter__rearming .rearming-time,
+.timer .counter__rearming .failure-time, .timer .counter__failure .work-time,
+.timer .counter__failure .measurements-time,
+.timer .counter__failure .rearming-time,
+.timer .counter__failure .failure-time {
+    font-size: 2rem;
+  }
+  .test {
+    margin-bottom: 17rem;
+  }
+  .table {
+    margin-top: 1vh;
+    margin-bottom: 3rem;
+  }
+  .table .weekly, .table .monthly {
+    margin-top: 3rem;
+  }
+  .table .table-style .title-name {
+    font-size: 2rem;
+  }
+  .table .table-style th {
+    padding-top: 1rem;
+  }
+  .table .table-style .name-operation .name {
+    font-size: 1.3rem;
+  }
+  .table .table-style td {
+    font-size: 1.3rem;
+    border: 1px solid #000000;
+    padding: 5px 30px;
+  }
+  .table .table-style tr .number {
+    text-align: center;
+  }
+  .table .table-style .sum {
+    color: #cf2e2e;
+  }
+  .monthly tr .numberMonth {
+    text-align: center;
+  }
+}
 @media (max-width: 540px) {
   .header__space {
     font-size: 1rem;
@@ -420,10 +478,6 @@ body {
   .timer .counter__work, .timer .counter__measurements, .timer .counter__rearming, .timer .counter__failure {
     height: 90%;
   }
-  .timer .counter__work:hover, .timer .counter__measurements:hover, .timer .counter__rearming:hover, .timer .counter__failure:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
   .timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
     font-size: 1rem;
     margin-bottom: 0rem;
@@ -441,65 +495,12 @@ body {
 .timer .counter__failure .measurements-time,
 .timer .counter__failure .rearming-time,
 .timer .counter__failure .failure-time {
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding-bottom: 0rem;
   }
   .footer {
-    margin-top: 1rem;
+    margin-top: 5rem;
     padding: 1rem;
-    text-align: center;
-  }
-}
-@media (max-width: 900px) {
-  .timer {
-    height: 46vh;
-  }
-  .timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
-    font-size: 2rem;
-  }
-  .timer .counter__work .work-time,
-.timer .counter__work .measurements-time,
-.timer .counter__work .rearming-time,
-.timer .counter__work .failure-time, .timer .counter__measurements .work-time,
-.timer .counter__measurements .measurements-time,
-.timer .counter__measurements .rearming-time,
-.timer .counter__measurements .failure-time, .timer .counter__rearming .work-time,
-.timer .counter__rearming .measurements-time,
-.timer .counter__rearming .rearming-time,
-.timer .counter__rearming .failure-time, .timer .counter__failure .work-time,
-.timer .counter__failure .measurements-time,
-.timer .counter__failure .rearming-time,
-.timer .counter__failure .failure-time {
-    font-size: 2rem;
-  }
-  .table {
-    margin-top: 1vh;
-    margin-bottom: 3rem;
-  }
-  .table .weekly, .table .monthly {
-    margin-top: 3rem;
-  }
-  .table .table-style .title-name {
-    font-size: 2rem;
-  }
-  .table .table-style th {
-    padding-top: 1rem;
-  }
-  .table .table-style .name-operation .name {
-    font-size: 1.3rem;
-  }
-  .table .table-style td {
-    font-size: 1.3rem;
-    border: 1px solid #000000;
-    padding: 5px 30px;
-  }
-  .table .table-style tr .number {
-    text-align: center;
-  }
-  .table .table-style .sum {
-    color: #cf2e2e;
-  }
-  .monthly tr .numberMonth {
     text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
