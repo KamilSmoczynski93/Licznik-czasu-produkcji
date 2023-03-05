@@ -177,6 +177,9 @@ function entryToTheTable() {
 			const downloadMeasurementsElement = document.getElementById('measurementsId').textContent
 			const downloadRearmingElement = document.getElementById('rearmingId').textContent
 			const downloadFailureElement = document.getElementById('failureId').textContent
+			const number = e
+
+			number.style.backgroundColor = "#4BA2EA"
 
 			e.nextElementSibling.textContent = downloadWorkElement
 			e.nextElementSibling.nextElementSibling.textContent = downloadMeasurementsElement
