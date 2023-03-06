@@ -1,8 +1,8 @@
 # Licznik-czasu-produkcji
-Test version.
-An application to control the times of individual activities on the production workstation.
-The times are entered in the table in the position corresponding to the current day of the month.
+<p>Test version.</p>
+<p>An application to control the times of individual activities on the production workstation.</p>
+<p>The times are entered in the table in the position corresponding to the current day of the month.</p>
 
 
-Login: test
-Password: test
+<p>Login: test</p>
+<p>Password: test</p>
