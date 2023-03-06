@@ -27,6 +27,9 @@ const numberDaysInTable = document.querySelectorAll('.number')
 const btnLogOut = document.querySelector('.test-text')
 const actualDay = new Date()
 
+let allTimeCounter = 0
+let allTimeInterval = null
+
 let workCounter = 0
 let workInterval = null
 
@@ -52,9 +55,9 @@ function displayTime(counter, element) {
 		(seconds < 10 ? '0' + seconds : seconds)
 }
 function startAllTimeInterval() {
-	workInterval = setInterval(() => {
-		workCounter++
-		displayTime(workCounter, document.querySelector('.log-in-time'))
+	allTimeInterval = setInterval(() => {
+		allTimeCounter++
+		displayTime(allTimeCounter, document.querySelector('.log-in-time'))
 	}, 1000)
 }
 function startWorkInterval() {
@@ -143,7 +146,7 @@ function failure() {
 	measurementsSquare.addEventListener('click', measurements)
 	rearmingSquare.addEventListener('click', rearming)
 }
-// window.addEventListener('DOMContentLoaded', () => {startAllTimeInterval()})
+window.addEventListener('DOMContentLoaded', () => {startAllTimeInterval()})
 workSquare.addEventListener('click', work)
 measurementsSquare.addEventListener('click', measurements)
 rearmingSquare.addEventListener('click', rearming)
