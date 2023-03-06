@@ -8,7 +8,7 @@ const timeClock = () => {
 	clock.innerHTML = d.toLocaleTimeString()
 }
 
-timeClock()
+//timeClock()
 
 const currentData = () => {
 	let date = new Date().toLocaleDateString()
