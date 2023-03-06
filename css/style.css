@@ -239,7 +239,7 @@ body {
 }
 
 .timer {
-  height: 50vh;
+  height: 29vh;
 }
 .timer .counter {
   display: flex;
@@ -350,7 +350,7 @@ body {
 
 @media (max-width: 900px) {
   .timer {
-    height: 46vh;
+    height: 20vh;
   }
   .timer .counter__work .counter__text, .timer .counter__measurements .counter__text, .timer .counter__rearming .counter__text, .timer .counter__failure .counter__text {
     font-size: 2rem;
@@ -371,7 +371,8 @@ body {
     font-size: 2rem;
   }
   .test {
-    margin-bottom: 17rem;
+    margin-bottom: 10rem;
+    margin-top: 0rem;
   }
   .table {
     margin-top: 1vh;
@@ -425,6 +426,10 @@ body {
     margin-left: 50%;
     transform: translateX(-50%);
   }
+  .test {
+    margin-bottom: 6rem;
+    margin-top: 0rem;
+  }
   .login-body {
     height: 83vh;
   }
@@ -447,7 +452,7 @@ body {
     display: flex;
     justify-content: center;
     width: 90%;
-    margin: 6rem auto;
+    margin: 4rem auto;
   }
   .log-inTime .counter__log-inTime {
     background-color: lightgray;
@@ -499,7 +504,7 @@ body {
     padding-bottom: 0rem;
   }
   .footer {
-    margin-top: 5rem;
+    margin-top: 1rem;
     padding: 1rem;
     text-align: center;
   }

@@ -1,6 +1,6 @@
 @media (max-width: 900px) {
     .timer {
-        height: 46vh;
+        height: 20vh;
         .counter {
     
             &__work,
@@ -21,7 +21,9 @@
         }
     }
     .test {
-        margin-bottom: 17rem;
+        margin-bottom: 10rem;
+        margin-top: 0rem;
+       
     }
     .table {
         margin-top: 1vh;
